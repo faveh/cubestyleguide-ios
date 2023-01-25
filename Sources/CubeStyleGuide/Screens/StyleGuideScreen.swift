@@ -12,7 +12,15 @@ import CubeFoundationSwiftUI
 public struct StyleGuideScreen: View {
 
     var content: StyleGuideContent
-    var theme: StyleGuideTheme = .default
+    var theme: StyleGuideTheme
+
+    public init(
+        content: StyleGuideContent,
+        theme: StyleGuideTheme = .default
+    ) {
+        self.content = content
+        self.theme = theme
+    }
 
     // MARK: Colors & Shadows
 

@@ -35,7 +35,7 @@ public struct StyleGuideTheme {
     }
 }
 
-extension StyleGuideTheme {
+public extension StyleGuideTheme {
 
     static let `default` = StyleGuideTheme(
         primaryTextStyle: TextStyle(font: .helveticaNeue, weight: 800, size: 10, lineHeight: 10),
