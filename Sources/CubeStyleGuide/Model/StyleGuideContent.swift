@@ -25,7 +25,7 @@ public struct StyleGuideContent {
     var marginLayoutValues: [NamedLayoutValue]
 }
 
-private extension StyleGuideContent {
+internal extension StyleGuideContent {
 
     static let demo = StyleGuideContent(
         primaryColorSwatches: [
@@ -86,7 +86,7 @@ private extension StyleGuideContent {
                     SwatchTextStyle(
                         name: "Heading 1000",
                         textStyle: TextStyle(
-                            font: .system,
+                            font: .helveticaNeue,
                             weight: .black,
                             size: 40,
                             lineHeight: 20
@@ -95,7 +95,7 @@ private extension StyleGuideContent {
                     SwatchTextStyle(
                         name: "Heading 500",
                         textStyle: TextStyle(
-                            font: .system,
+                            font: .helveticaNeue,
                             weight: .black,
                             size: 30,
                             lineHeight: 20
@@ -109,7 +109,7 @@ private extension StyleGuideContent {
                     SwatchTextStyle(
                         name: "Heading 1000",
                         textStyle: TextStyle(
-                            font: .system,
+                            font: .helveticaNeue,
                             weight: .black,
                             size: 20,
                             lineHeight: 20
@@ -118,7 +118,7 @@ private extension StyleGuideContent {
                     SwatchTextStyle(
                         name: "Heading 500",
                         textStyle: TextStyle(
-                            font: .system,
+                            font: .helveticaNeue,
                             weight: .black,
                             size: 10,
                             lineHeight: 20

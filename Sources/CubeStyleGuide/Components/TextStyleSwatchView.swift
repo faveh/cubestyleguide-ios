@@ -38,7 +38,7 @@ fileprivate struct TextStyleView_Previews: PreviewProvider {
                     SwatchTextStyle(
                         name: "Heading 1000",
                         textStyle: TextStyle(
-                            font: .system,
+                            font: .helveticaNeue,
                             weight: .black,
                             size: 22,
                             lineHeight: 20
