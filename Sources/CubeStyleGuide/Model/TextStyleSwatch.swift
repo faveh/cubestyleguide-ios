@@ -10,11 +10,29 @@ import Foundation
 import CubeFoundationSwiftUI
 
 public struct TextStyleSwatch: Hashable {
+
     var name: String
     var textStyles: [SwatchTextStyle]
+
+    public init(
+        name: String,
+        textStyles: [SwatchTextStyle]
+    ) {
+        self.name = name
+        self.textStyles = textStyles
+    }
 }
 
 public struct SwatchTextStyle: Hashable {
+
     var name: String
     var textStyle: TextStyle
+
+    public init(
+        name: String,
+        textStyle: TextStyle
+    ) {
+        self.name = name
+        self.textStyle = textStyle
+    }
 }

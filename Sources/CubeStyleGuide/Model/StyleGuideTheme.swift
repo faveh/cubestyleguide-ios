@@ -13,11 +13,26 @@ public struct StyleGuideTheme {
 
     var primaryTextStyle: TextStyle
     var secondaryTextStyle: TextStyle
-
     var backgroundColor: Color
     var primaryColor: Color
     var secondaryColor: Color
     var accentColor: Color
+
+    public init(
+        primaryTextStyle: TextStyle,
+        secondaryTextStyle: TextStyle,
+        backgroundColor: Color,
+        primaryColor: Color,
+        secondaryColor: Color,
+        accentColor: Color
+    ) {
+        self.primaryTextStyle = primaryTextStyle
+        self.secondaryTextStyle = secondaryTextStyle
+        self.backgroundColor = backgroundColor
+        self.primaryColor = primaryColor
+        self.secondaryColor = secondaryColor
+        self.accentColor = accentColor
+    }
 }
 
 extension StyleGuideTheme {

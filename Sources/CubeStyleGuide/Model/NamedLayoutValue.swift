@@ -9,6 +9,15 @@
 import Foundation
 
 public struct NamedLayoutValue: Hashable {
+
     var name: String
     var value: CGFloat
+
+    public init(
+        name: String, 
+        value: CGFloat
+    ) {
+        self.name = name
+        self.value = value
+    }
 }

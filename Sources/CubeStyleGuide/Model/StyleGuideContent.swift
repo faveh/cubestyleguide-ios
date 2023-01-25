@@ -14,15 +14,29 @@ public struct StyleGuideContent {
 
     var primaryColorSwatches: [ColorSwatch]
     var secondaryColorSwatches: [ColorSwatch]
-
     var shadows: [NamedShadow]
-
     var textStyleSwatches: [TextStyleSwatch]
-
     var componentSwatches: [ComponentSwatch]
-
     var layoutValues: [NamedLayoutValue]
     var marginLayoutValues: [NamedLayoutValue]
+
+    public init(
+        primaryColorSwatches: [ColorSwatch],
+        secondaryColorSwatches: [ColorSwatch],
+        shadows: [NamedShadow],
+        textStyleSwatches: [TextStyleSwatch],
+        componentSwatches: [ComponentSwatch],
+        layoutValues: [NamedLayoutValue],
+        marginLayoutValues: [NamedLayoutValue]
+    ) {
+        self.primaryColorSwatches = primaryColorSwatches
+        self.secondaryColorSwatches = secondaryColorSwatches
+        self.shadows = shadows
+        self.textStyleSwatches = textStyleSwatches
+        self.componentSwatches = componentSwatches
+        self.layoutValues = layoutValues
+        self.marginLayoutValues = marginLayoutValues
+    }
 }
 
 internal extension StyleGuideContent {

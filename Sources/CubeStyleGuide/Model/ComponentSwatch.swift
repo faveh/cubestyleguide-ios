@@ -9,15 +9,28 @@
 import SwiftUI
 
 public struct ComponentSwatch {
+
     var name: String
     var components: [SwatchComponent]
+
+    public init(
+        name: String,
+        components: [SwatchComponent]
+    ) {
+        self.name = name
+        self.components = components
+    }
 }
 
 public struct SwatchComponent {
+
     var name: String
     var component: AnyView
 
-    init(name: String, @ViewBuilder component: @escaping () -> some View) {
+    public init(
+        name: String,
+        @ViewBuilder component: @escaping () -> some View
+    ) {
         self.name = name
         self.component = AnyView(component())
     }

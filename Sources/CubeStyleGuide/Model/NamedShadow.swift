@@ -10,6 +10,15 @@ import Foundation
 import CubeFoundationSwiftUI
 
 public struct NamedShadow: Hashable {
+
     var name: String
     var shadow: FigmaShadow
+
+    public init(
+        name: String, 
+        shadow: FigmaShadow
+    ) {
+        self.name = name
+        self.shadow = shadow
+    }
 }
