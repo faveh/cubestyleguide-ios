@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import CubeFoundationSwiftUI
 
 public struct ColorSwatchView: View {
 
