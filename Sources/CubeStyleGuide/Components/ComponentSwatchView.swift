@@ -17,7 +17,7 @@ public struct ComponentSwatchView: View {
         VStack(spacing: .sectionSpacing) {
             StyleGuideSubheadingView(text: swatch.name, theme: theme)
 
-            ForEach(swatch.components, id: \.name) { component in
+            ForEach(swatch.components) { component in
                 VStack(spacing: 8) {
                     Text(component.name)
                         .style(theme.primaryTextStyle)

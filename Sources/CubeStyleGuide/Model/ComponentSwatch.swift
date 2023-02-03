@@ -24,8 +24,9 @@ public struct ComponentSwatch: Identifiable {
     }
 }
 
-public struct SwatchComponent {
+public struct SwatchComponent: Identifiable {
 
+    public var id: UUID
     var name: String
     var component: AnyView
 
@@ -33,6 +34,7 @@ public struct SwatchComponent {
         name: String,
         @ViewBuilder component: @escaping () -> some View
     ) {
+        self.id = UUID()
         self.name = name
         self.component = AnyView(component())
     }
