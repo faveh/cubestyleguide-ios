@@ -8,8 +8,9 @@
 
 import SwiftUI
 
-public struct ComponentSwatch {
+public struct ComponentSwatch: Identifiable {
 
+    public var id: UUID
     var name: String
     var components: [SwatchComponent]
 
@@ -17,13 +18,15 @@ public struct ComponentSwatch {
         name: String,
         components: [SwatchComponent]
     ) {
+        self.id = UUID()
         self.name = name
         self.components = components
     }
 }
 
-public struct SwatchComponent {
+public struct SwatchComponent: Identifiable {
 
+    public var id: UUID
     var name: String
     var component: AnyView
 
@@ -31,6 +34,7 @@ public struct SwatchComponent {
         name: String,
         @ViewBuilder component: @escaping () -> some View
     ) {
+        self.id = UUID()
         self.name = name
         self.component = AnyView(component())
     }
