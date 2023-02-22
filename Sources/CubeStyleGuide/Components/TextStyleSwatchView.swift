@@ -21,9 +21,9 @@ public struct TextStyleSwatchView: View {
                 ForEach(swatch.textStyles, id: \.self) { style in
                     Text(style.name)
                         .style(style.textStyle)
+                        .foregroundColor(style.color ?? theme.primaryColor)
                 }
             }
-            .foregroundColor(theme.primaryColor)
             .padding(.horizontal, .margin)
         }
     }
