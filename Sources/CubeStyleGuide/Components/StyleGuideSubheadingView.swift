@@ -26,7 +26,7 @@ public struct StyleGuideSubheadingView: View {
     }
 }
 
-fileprivate struct StyleGuideSubheadingView_Previews: PreviewProvider {
+struct StyleGuideSubheadingView_Previews: PreviewProvider {
     static var previews: some View {
         StyleGuideSubheadingView(text: "Subheading", theme: .default)
     }

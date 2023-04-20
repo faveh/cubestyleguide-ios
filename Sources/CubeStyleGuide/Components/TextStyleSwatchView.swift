@@ -29,7 +29,7 @@ public struct TextStyleSwatchView: View {
     }
 }
 
-fileprivate struct TextStyleView_Previews: PreviewProvider {
+struct TextStyleView_Previews: PreviewProvider {
     static var previews: some View {
         TextStyleSwatchView(
             swatch: TextStyleSwatch(

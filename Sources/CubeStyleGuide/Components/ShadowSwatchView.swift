@@ -28,7 +28,7 @@ public struct ShadowSwatchView: View {
     }
 }
 
-fileprivate struct ShadowSwatchView_Previews: PreviewProvider {
+struct ShadowSwatchView_Previews: PreviewProvider {
     static var previews: some View {
         ShadowSwatchView(
             shadow: NamedShadow(

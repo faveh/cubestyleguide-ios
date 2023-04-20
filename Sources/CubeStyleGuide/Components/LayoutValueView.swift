@@ -32,7 +32,7 @@ public struct LayoutValueView: View {
     }
 }
 
-fileprivate struct LayoutValueView_Previews: PreviewProvider {
+struct LayoutValueView_Previews: PreviewProvider {
     static var previews: some View {
         LayoutValueView(layoutValue: NamedLayoutValue(name: "400", value: 16), theme: .default)
             .frame(width: 75)

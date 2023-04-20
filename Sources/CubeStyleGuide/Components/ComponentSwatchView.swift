@@ -30,7 +30,7 @@ public struct ComponentSwatchView: View {
     }
 }
 
-fileprivate struct ComponentSwatchView_Previews: PreviewProvider {
+struct ComponentSwatchView_Previews: PreviewProvider {
     static var previews: some View {
         ComponentSwatchView(
             swatch: ComponentSwatch(
