@@ -24,7 +24,7 @@ public struct StyleGuideHeadingView: View {
     }
 }
 
-fileprivate struct UIStyleGuideHeadingView_Previews: PreviewProvider {
+struct UIStyleGuideHeadingView_Previews: PreviewProvider {
     static var previews: some View {
         StyleGuideHeadingView(text: "UI Style Guide Header", theme: .default)
     }

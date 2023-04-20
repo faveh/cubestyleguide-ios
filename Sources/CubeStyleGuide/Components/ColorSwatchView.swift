@@ -89,7 +89,7 @@ fileprivate struct SwatchSingleColorView: View {
     }
 }
 
-fileprivate struct ColorSwatchView_Previews: PreviewProvider {
+struct ColorSwatchView_Previews: PreviewProvider {
     static var previews: some View {
         ColorSwatchView(
             swatch: ColorSwatch(

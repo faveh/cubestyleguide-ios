@@ -37,7 +37,7 @@ public struct MarginLayoutValueView: View {
     }
 }
 
-fileprivate struct MarginLayoutValueView_Previews: PreviewProvider {
+struct MarginLayoutValueView_Previews: PreviewProvider {
     static var previews: some View {
         MarginLayoutValueView(
             layoutValue: NamedLayoutValue(
