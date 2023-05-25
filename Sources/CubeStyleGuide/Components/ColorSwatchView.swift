@@ -78,6 +78,7 @@ fileprivate struct SwatchSingleColorView: View {
                 .background(style == .secondary ? theme.primaryColor : Color.clear)
             color.color
                 .frame(height: 45)
+                .border(.black, width: color.outlined ? 1 : 0)
             if style == .primary {
                 Text(color.name)
                     .style(theme.primaryTextStyle)
@@ -101,7 +102,7 @@ struct ColorSwatchView_Previews: PreviewProvider {
                     SwatchColor(name: "Green", color: .green, highlighted: true),
                     SwatchColor(name: "Blue", color: .blue),
                     SwatchColor(name: "Indigo", color: .indigo),
-                    SwatchColor(name: "Violet", color: .purple)
+                    SwatchColor(name: "Violet", color: .purple, outlined: true)
                 ]
             ),
             theme: .default
