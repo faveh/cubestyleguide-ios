@@ -6,7 +6,7 @@
 //  Copyright © 2023 3 SIDED CUBE APP PRODUCTIONS LTD. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 
 public struct NamedLayoutValue: Hashable {
 

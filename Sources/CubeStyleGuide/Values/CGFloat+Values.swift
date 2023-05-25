@@ -6,7 +6,7 @@
 //  Copyright © 2023 3 SIDED CUBE APP PRODUCTIONS LTD. All rights reserved.
 //
 
-import CoreGraphics
+import SwiftUI
 
 internal extension CGFloat {
 
