@@ -30,9 +30,9 @@ public struct SwatchComponent: Identifiable {
     var name: String
     var component: AnyView
 
-    public init(
+    public init<Content: View>(
         name: String,
-        @ViewBuilder component: @escaping () -> some View
+        @ViewBuilder component: @escaping () -> Content
     ) {
         self.id = UUID()
         self.name = name
