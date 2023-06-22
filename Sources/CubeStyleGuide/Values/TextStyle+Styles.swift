@@ -11,6 +11,6 @@ import CubeFoundationSwiftUI
 
 extension TextStyle {
 
-    static let primary = TextStyle(font: .helveticaNeue, weight: 800, size: 10, lineHeight: 10)
-    static let secondary = TextStyle(font: .helveticaNeue, weight: 700, size: 12, lineHeight: 10)
+    static let primary = TextStyle(.helveticaNeue, weight: 800, size: 10, lineHeight: 10)
+    static let secondary = TextStyle(.helveticaNeue, weight: 700, size: 12, lineHeight: 10)
 }

@@ -100,7 +100,7 @@ internal extension StyleGuideContent {
                     SwatchTextStyle(
                         name: "Heading 1000",
                         textStyle: TextStyle(
-                            font: .helveticaNeue,
+                            .helveticaNeue,
                             weight: .black,
                             size: 40,
                             lineHeight: 20
@@ -109,7 +109,7 @@ internal extension StyleGuideContent {
                     SwatchTextStyle(
                         name: "Heading 500",
                         textStyle: TextStyle(
-                            font: .helveticaNeue,
+                            .helveticaNeue,
                             weight: .black,
                             size: 30,
                             lineHeight: 20
@@ -123,7 +123,7 @@ internal extension StyleGuideContent {
                     SwatchTextStyle(
                         name: "Heading 1000",
                         textStyle: TextStyle(
-                            font: .helveticaNeue,
+                            .helveticaNeue,
                             weight: .black,
                             size: 20,
                             lineHeight: 20
@@ -132,7 +132,7 @@ internal extension StyleGuideContent {
                     SwatchTextStyle(
                         name: "Heading 500",
                         textStyle: TextStyle(
-                            font: .helveticaNeue,
+                            .helveticaNeue,
                             weight: .black,
                             size: 10,
                             lineHeight: 20
