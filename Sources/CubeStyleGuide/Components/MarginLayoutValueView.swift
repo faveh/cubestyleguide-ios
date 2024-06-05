@@ -13,6 +13,11 @@ public struct MarginLayoutValueView: View {
     var layoutValue: NamedLayoutValue
     var theme: StyleGuideTheme
 
+    public init(layoutValue: NamedLayoutValue, theme: StyleGuideTheme) {
+        self.layoutValue = layoutValue
+        self.theme = theme
+    }
+
     public var body: some View {
         HStack(spacing: 10) {
             theme.accentColor
@@ -46,5 +51,32 @@ struct MarginLayoutValueView_Previews: PreviewProvider {
             ),
             theme: .default
         )
+    }
+}
+
+
+public struct EndScrollLayoutValueView: View {
+
+    var layoutValue: NamedLayoutValue
+    var theme: StyleGuideTheme
+
+    public init(layoutValue: NamedLayoutValue, theme: StyleGuideTheme) {
+        self.layoutValue = layoutValue
+        self.theme = theme
+    }
+
+    public var body: some View {
+        VStack {
+            VStack(alignment: .center) {
+                Spacer()
+                Text(layoutValue.name)
+                    .style(theme.primaryTextStyle)
+                Text(verbatim: "\(Int(layoutValue.value))px")
+                    .style(theme.primaryTextStyle)
+            }
+            theme.accentColor
+                .frame(height: layoutValue.value)
+        }
+        .foregroundColor(theme.primaryColor)
     }
 }

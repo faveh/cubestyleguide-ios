@@ -14,6 +14,11 @@ public struct ShadowSwatchView: View {
     var shadow: NamedShadow
     var theme: StyleGuideTheme
 
+    public init(shadow: NamedShadow, theme: StyleGuideTheme) {
+        self.shadow = shadow
+        self.theme = theme
+    }
+
     public var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(verbatim: "\(String.shadow) - \(shadow.name)")
@@ -24,6 +29,30 @@ public struct ShadowSwatchView: View {
             Color.white
                 .frame(height: 45)
                 .shadow(shadow.shadow)
+        }
+    }
+}
+
+public struct MutipleShadowsSwatchView: View {
+
+    var shadows: NamedShadows
+    var theme: StyleGuideTheme
+
+    public init(shadows: NamedShadows, theme: StyleGuideTheme) {
+        self.shadows = shadows
+        self.theme = theme
+    }
+
+    public var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text(verbatim: "\(String.shadow) - \(shadows.name)")
+                .style(theme.primaryTextStyle)
+                .padding(5)
+                .background(theme.primaryColor)
+                .foregroundColor(.white)
+            Color.white
+                .frame(height: 45)
+                .multipleShadows(shadows.shadows)
         }
     }
 }
