@@ -14,9 +14,16 @@ public struct TextStyleSwatchView: View {
     var swatch: TextStyleSwatch
     var theme: StyleGuideTheme
 
+    public init(swatch: TextStyleSwatch, theme: StyleGuideTheme) {
+        self.swatch = swatch
+        self.theme = theme
+    }
+
     public var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            StyleGuideSubheadingView(text: swatch.name, theme: theme)
+            if !swatch.name.isEmpty {
+                StyleGuideSubheadingView(text: swatch.name, theme: theme)
+            }
             VStack(alignment: .leading, spacing: 16) {
                 ForEach(swatch.textStyles, id: \.self) { style in
                     Text(style.name)

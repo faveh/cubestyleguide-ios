@@ -13,14 +13,23 @@ public struct ComponentSwatchView: View {
     var swatch: ComponentSwatch
     var theme: StyleGuideTheme
 
+    public init(swatch: ComponentSwatch, theme: StyleGuideTheme) {
+        self.swatch = swatch
+        self.theme = theme
+    }
+
     public var body: some View {
         VStack(spacing: .sectionSpacing) {
-            StyleGuideSubheadingView(text: swatch.name, theme: theme)
+            if !swatch.name.isEmpty {
+                StyleGuideSubheadingView(text: swatch.name, theme: theme)
+            }
 
             ForEach(swatch.components) { component in
                 VStack(spacing: 8) {
-                    Text(component.name)
-                        .style(theme.primaryTextStyle)
+                    if !component.name.isEmpty {
+                        Text(component.name)
+                            .style(theme.primaryTextStyle)
+                    }
                     component.component
                 }
             }

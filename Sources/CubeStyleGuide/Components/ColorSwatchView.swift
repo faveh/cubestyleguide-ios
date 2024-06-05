@@ -9,15 +9,24 @@
 import SwiftUI
 import CubeFoundationSwiftUI
 
+public enum ColorSwatchStyle {
+    case primary
+    case secondary
+    case none
+}
 public struct ColorSwatchView: View {
-
     var swatch: ColorSwatch
-    var style: ColorSwatchStyle = .primary
+    var style: ColorSwatchStyle
     var theme: StyleGuideTheme
 
-    enum ColorSwatchStyle {
-        case primary
-        case secondary
+    public init(
+        swatch: ColorSwatch,
+        style: ColorSwatchStyle = .primary,
+        theme: StyleGuideTheme
+    ) {
+        self.swatch = swatch
+        self.style = style
+        self.theme = theme
     }
 
     public var body: some View {
@@ -43,13 +52,15 @@ fileprivate struct SwatchSingleColorView: View {
 
     var swatchName: String
     var color: SwatchColor
-    var style: ColorSwatchView.ColorSwatchStyle
+    var style: ColorSwatchStyle
     var theme: StyleGuideTheme
 
     var label: String {
         var text = color.highlighted ? swatchName : .variant
         if style == .secondary {
             text.append(" - \(color.name)")
+        } else if style == .none {
+            text = color.color.hexString(opacity: false)
         }
         return text
     }
@@ -71,15 +82,15 @@ fileprivate struct SwatchSingleColorView: View {
     }
 
     var body: some View {
-        VStack(alignment: style == .primary ? .center : .leading, spacing: 0) {
+        VStack(alignment: style != .secondary ? .center : .leading, spacing: 0) {
             Text(label)
                 .style(theme.primaryTextStyle)
-                .padding(5)
+                .padding(style == .none ? 1 : 5)
                 .background(style == .secondary ? theme.primaryColor : Color.clear)
             color.color
                 .frame(height: 45)
                 .border(.black, width: color.outlined ? 1 : 0)
-            if style == .primary {
+            if style != .secondary {
                 Text(color.name)
                     .style(theme.primaryTextStyle)
                     .padding(5)

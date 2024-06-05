@@ -14,6 +14,11 @@ public struct LayoutValueView: View {
     var layoutValue: NamedLayoutValue
     var theme: StyleGuideTheme
 
+    public init(layoutValue: NamedLayoutValue, theme: StyleGuideTheme) {
+        self.layoutValue = layoutValue
+        self.theme = theme
+    }
+
     public var body: some View {
         ZStack {
             Color.white

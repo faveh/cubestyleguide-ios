@@ -13,6 +13,11 @@ public struct StyleGuideHeadingView: View {
     var text: String
     var theme: StyleGuideTheme
 
+    public init(text: String, theme: StyleGuideTheme) {
+        self.text = text
+        self.theme = theme
+    }
+
     public var body: some View {
         Text(text)
             .style(theme.primaryTextStyle)
