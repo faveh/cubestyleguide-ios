@@ -15,10 +15,25 @@ public struct NamedShadow: Hashable {
     var shadow: FigmaShadow
 
     public init(
-        name: String, 
+        name: String,
         shadow: FigmaShadow
     ) {
         self.name = name
         self.shadow = shadow
     }
 }
+
+public struct NamedShadows: Hashable {
+
+    var name: String
+    var shadows: [FigmaShadow]
+
+    public init(
+        name: String,
+        shadows: [FigmaShadow]
+    ) {
+        self.name = name
+        self.shadows = shadows
+    }
+}
+
