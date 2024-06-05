@@ -15,7 +15,7 @@ public struct TextStyleSwatch: Hashable {
     var textStyles: [SwatchTextStyle]
 
     public init(
-        name: String,
+        name: String = "",
         textStyles: [SwatchTextStyle]
     ) {
         self.name = name

@@ -15,7 +15,7 @@ public struct ComponentSwatch: Identifiable {
     var components: [SwatchComponent]
 
     public init(
-        name: String,
+        name: String = "",
         components: [SwatchComponent]
     ) {
         self.id = UUID()
@@ -31,7 +31,7 @@ public struct SwatchComponent: Identifiable {
     var component: AnyView
 
     public init(
-        name: String,
+        name: String = "",
         @ViewBuilder component: @escaping () -> some View
     ) {
         self.id = UUID()
